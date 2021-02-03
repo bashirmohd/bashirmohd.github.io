@@ -23,7 +23,7 @@ img {
 @media only screen and (max-width: 767px)
 .home-text h1{
     text-align: center;
-    font-size: 60px !important;
+    font-size: 30px !important;
 }
 
 @media only screen and (max-width: 500px)
