@@ -14,7 +14,7 @@ img {
 }
 
 .home-text h1 {
-    font-size: 88px;
+    font-size: 44px;
     line-height: 56px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -23,7 +23,7 @@ img {
 @media only screen and (max-width: 767px)
 .home-text h1{
     text-align: center;
-    font-size: 30px !important;
+    font-size: 60px !important;
 }
 
 @media only screen and (max-width: 500px)
