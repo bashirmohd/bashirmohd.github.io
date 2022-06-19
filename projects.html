@@ -110,7 +110,7 @@
                     <div class="p-10"></div>
 
                     <div class="block-title">
-                      <h2>Traffic forecasting using Graph Neural Network</h2>
+                      <h2>DeepRoute: Experimenting with Large-scale Reinforcement Learning and SDN on Chameleon Testbed and Mininet</h2>
                     </div>
                   </div>
                 </div>
@@ -125,12 +125,8 @@
       
                         <div class="ci-text">
                           <!-- <h4>Copywrite</h4> -->
-                          <p>California traffic has drawn the attention of city planners and researchers for decades. This trend, along with California's dense and complex traffic, makes the city ideal for energy-saving, vehicle-centered traffic management studies.</p>
-                          <p>Our team at Argonne National Laboratory (ANL) accurately forecast large-scale traffic patterns under the umbrella of a larger project on the design and planning of mobility systems led by collaborators at DOE’s Lawrence Berkeley National Laboratory (LBNL).</p>
-                          <p>We developed graph-partitioning-based Diffusion Convolutional Recurrent Neural Network (DCRNN) approach for large scale traffic forecasting. The highway traffic network is represented as a directed graph whose nodes are sensor locations (loop detectors that capture the traffic speed and flow over time), and edge weights are the driving distance between the pairs of sensor locations. The algorithm partitions a graph (large highway network) into subgraphs and trains a DCRNN for each subgraph independently. We demonstrated the efficacy of the graph-partitioning-based DCRNN approach to model the traffic on a large California highway network with 11,160 sensor locations.
-                          We developed an overlapping nodes approach for the graph-partitioning-based DCRNN to include sensor locations from other partitions that are geographically close to a given partition. </p>
-                          <p>Furthermore, we demonstrated that the DCRNN model can be used to forecast the speed and flow simultaneously and that the forecasted values preserve fundamental traffic flow dynamics. 
-                          Our approach of developing DCRNN models that represent large highway networks can be a potential core capability in advance highway traffic monitoring systems. The forecasted results of a trained DCRNN model at all sensor locations can be used to adjust traffic management strategies proactively.</p>
+                          <p>As the numbers of internet users and connected devices continue to multiply, due to big data and Cloud applications, network traffic is growing at an exponential rate. WAN networks, in particular, are witnessing very large traffic spikes cause by large file transfers that last from a few minutes to hours on network links and there is a need to develop innovative ways in which flows can be managed in real-time.</p>
+                          <p>In this work, we develop a reinforcement learning approach, in particular Upper-Confidence Algorithm, to learn optimal paths and reroute traffic to improve network utilization. We present throughput and flow diversions using Mininet and demo the technique using Chameleon's Testbed (Bring-Your-Own-Controller [BYOC] functionality). This work is initial implementation towards DeepRoute, which combines Deep reinforcement learning algorithms with SDN controllers to create and route traffic using deployed OpenFlow switches.</p>
                           </div>
                       </div>
                     </div>
@@ -152,7 +148,7 @@
                     <div class="p-10"></div>
 
                     <div class="block-title">
-                      <h2>Transfer learning with graph neural networks for short-term highway traffic forecasting</h2>
+                      <h2>DynamicDeepFlow: An Approach for Identifying Changes in Network Traffic Flow Using Unsupervised Clustering</h2>
                     </div>
                   </div>
                 </div>
@@ -161,7 +157,11 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="ci-text">
                       <img src="./Projects_files/tldcrnn.png" align="center">
-                      <p>Transfer Learning-DCRNN (TL-DCRNN) partitions the large highway network withhistorical  data  into  a  number  of  subgraphs  using  a  graphpartitioning  method.  These  subgraphs  are  used  to  train  thethe  encoder-decoder  architecture  with  diffusion  convolutional recurrent neural network cells. Given an unseen graph during inference,TL-DCRNN partitions the graph and uses the trainedmodel for short-term traffic forecasting </p>
+                          <p>Understanding flow changes in network traffic has great im-
+                            portance in designing and building robust networking infrastructure. Recent efforts from industry and academia have led to the development of
+                            monitoring tools that are capable of collecting real-time flow data, predicting future traffic patterns, and mirroring packet headers. These mon-
+                            itoring tools, however, require offline analysis of the data to understand
+                            the big versus small flows and recognize congestion hot spots in the network, which is still an unfilled gap in research. </p>
                   
                     </div>
                   </div>
@@ -174,18 +174,23 @@
       
                         <div class="ci-text">
                           <!-- <h4>Copywrite</h4> -->
-                          <p> Large-scale highway traffic forecasting approaches are critical for intelligent transportation systems. Recently, deep learning-based traffic forecasting methods have emerged as promising approaches for a wide range of traffic forecasting tasks. These methods are specific to a given traffic network, however, and consequently they cannot be used for forecasting traffic on an unseen traffic network. 
-                          Previous work has identified diffusion convolutional recurrent neural networks, (DCRNN), as a state-of-the-art method for highway traffic forecasting. It models the complex spatial and temporal dynamics of a highway network using a graph-based diffusion convolution operation within a recurrent neural network. Currently, DCRNN cannot perform transfer learning because it learns location-specific traffic 
-                          patterns, which cannot be used for unseen  regions of a network or new geographic locations. </p>
-                          
-                          <p>To that end, we develop TL-DCRNN, a new transfer learning approach for DCRNN, where a single model trained on a highway network can be used to forecast traffic on unseen highway networks. Given a traffic network with a large amount of traffic data, our approach consists of partitioning the traffic network into 
-                          a number of subgraphs and using a new training scheme that utilizes subgraphs to marginalize the location-specific information, thus learning the traffic as a function of network connectivity and temporal patterns alone. The resulting trained model can be used to forecast traffic on unseen networks. We demonstrate that TL-DCRNN can learn from San Francisco regional traffic data and can forecast traffic 
-                          on the Los Angeles region and vice versa.
-                          </p>
-                          <p>TL-DCRNN outperformed all state-of-the-art traffic forecasting methods such as such as ARIMA, SVR, FNN, LSTM, spatiotemporal graph convolutional network.
-                          Allowing practitioners to apply data-driven methods trained on datasets collected elsewhere is a transformative capability, enabling a wide range of transportation system operations and functions to operate more efficiently and sustainably 
-                          through improved forecasting at reduced infrastructure development and data acquisition costs.  
-                          </p>
+
+                            <p>In this study, we proposed
+                            an innovative unsupervised clustering approach, DynamicDeepFlow, for
+                            network traffic pattern clustering. The DynamicDeepFlow can recognize
+                            unseen network traffic patterns based on the analysis of the rapid flow
+                            changes from the historical data. The proposed method consists of a deep
+                            learning model, variational autoencoder, and a shallow learning model,
+                            k-means++. The variational autoencoder is used to compress and extract the most useful features from the flow inputs. The compressed and
+                            extracted features then serve as input-output pairs to k-means++. The
+                            k-means++ explores the structure hidden in these features and then uses
+                            them to cluster the network traffic patterns. To the best of our knowledge, this is one of the first attempts to apply a real-time network clus-
+                            tering approach to monitor network operations. The real-world network
+                            flow data from Energy Sciences Network (a network serving the U.S. Department of Energy to support U.S. scientific research) was utilized to
+                            verify the performance of the proposed approach in network traffic pattern clustering. The verification results show that the proposed method
+                            is able to distinguish anomalous network traffic patterns from normal
+                            patterns, and thereby trigger an anomaly flag.
+                            </p>
                           </div>
                       </div>
                     </div>
