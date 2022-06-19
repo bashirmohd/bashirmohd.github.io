@@ -284,7 +284,7 @@
       
                         <div class="ci-text">
                           <!-- <h4>Copywrite</h4> -->
-                          <p>During bulk data transfer for exascale scientific applications, measuring the available throughput is very useful for route selection in high-speed networks, Quality of service verification, and traffic engineering. Recent years have seen a surge in available throughput estimation tools, especially in Research and Education (R\&E) Networks. Some tools have been proposed and evaluated in simulation and over a limited number of Internet paths. However, there is still significant uncertainty in the performance and flexibility of these tools at large. Furthermore, some existing tools' primary concern is the lack of network performance history or a memory that stores previous configurations and network measurements..</p>
+                          <p>During bulk data transfer for exascale scientific applications, measuring the available throughput is very useful for route selection in high-speed networks, Quality of service verification, and traffic engineering. Recent years have seen a surge in available throughput estimation tools, especially in Research and Education (R&E) Networks. Some tools have been proposed and evaluated in simulation and over a limited number of Internet paths. However, there is still significant uncertainty in the performance and flexibility of these tools at large. Furthermore, some existing tools' primary concern is the lack of network performance history or a memory that stores previous configurations and network measurements..</p>
                           <br>
                           <p>This work introduces Net-PreFlight, a simple end-to-end, lightweight tool for measuring available throughput, traceroute, and maintains memory, compared to existing tools like Iperf. Our tool focuses on throughput measurements, flexibility, a retentive memory, security, and performance. We conduct experiments between multiple Data Transfer Node (DTN) setups in isolated and public network setups to measure how throughput measurements fare in the two domains. In all scenarios, Net-Preflight produces comparable results as established tools and hence positions itself as a complementary tool for situations where the deployment of Iperf or perfSONAR is not possible. In addition, Net-Preflight features retentive memory to easily compare past and present measurements. Our analysis reveals that using socket and file transfer protocols performs well in initial measurements and also indicates that parallel TCP streams are equivalent to using a large maximum segment size on a single connection in the absence of congestion. Here, we lay the foundation to build a new monitoring system for DTN bulk transfers that target end-users who require optimum network performance.</p>
                         </div>
@@ -294,13 +294,46 @@
 
                   <div class="col-xs-12 col-sm-6">
                     <div class="ci-text">
-                      <img src="./Projects_files/dr.jpg" align="center">
+                      <img src="./Projects_files/netpref.jpg" align="center">
                       <p>Throughput measurement for large data transfer over isolated Network (CHI@UC to CHI@TACC) and public Network (NERSC DTN to CHI@UC DTN).</p>
                     </div>
                   </div>
                 </div>
                 <!-- /Services -->
           
+              <div class="block-title">
+                      <h2>Net-Preflight Check: Using File transfer to Measure Network Performance before Large Data Transfers</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="info-list-w-icon">
+                      <div class="info-block-w-icon">
+                        <!-- <div class="ci-icon">
+                          <i class="linecons linecons-pen"></i>
+                        </div> -->
+      
+                        <div class="ci-text">
+                          <!-- <h4>Copywrite</h4> -->
+                          <p>Wide area networks are built to have enough resilience and flexibility, such as offering many paths between multiple pairs of end hosts. To prevent congestion, current practices involve numerous tweaking of routing tables to optimize path computation, such as flow diversion to alternate paths or load balancing. However, this process is slow, costly and require difficult online decision-making to learn appropriate settings, such as flow arrival rate, workload, and current network environment. Inspired by recent advances in AI to manage resources, we present DeepRoute, a model-less reinforcement learning approach that translates the path computation problem to a learning problem. Learning from the network environment, DeepRoute learns strategies to manage arriving elephant and mice flows to improve the average path utilization in the network. Comparing to other strategies such as prioritizing certain flows and random decisions, DeepRoute is shown to improve average network path utilization to 30% and potentially reduce possible congestion across the whole network.</p>
+                          <br>
+                          <p>This work presents results in simulation and also how DeepRoute can be demonstrated by a Mininet implementation.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="ci-text">
+                      <img src="./Projects_files/d4.jpg" align="center">
+                      <p>Throughput measurement for large data transfer over isolated Network (CHI@UC to CHI@TACC) and public Network (NERSC DTN to CHI@UC DTN).</p>
+                    </div>
+                  </div>
+                </div>
+              
+              
                   <div class="block-title">
                       <h2>DeepRoute Mininet Implementation: Herding Elephant and Mice Flows with Reinforcement Learning</h2>
                     </div>
