@@ -318,21 +318,22 @@
                         <div class="ci-text">
                           <!-- <h4>Copywrite</h4> -->
                           <p>
-                            We developed and test how machine learning and control approaches can be used to optimize how network resources are utilized. The research challenges we target are (1) building real-time machine learning solutions to learn the current network state, (2) use reinforcement and control approaches to optimize how the resources are utilized and finally (3) making the network autonomic to self regulate itself with varying load. Although focused on networks, the techniques developed are relevant for controlling and optimize virtual resources in Cloud management policies. 
+                            Wide area networks are built to have enough resilience and flexibility, such as offering many paths between multiple pairs of end hosts. To prevent congestion, current practices involve numerous tweaking of routing tables to optimize path computation, such as flow diversion to alternate paths or load balancing. However, this process is slow, costly and require difficult online decision-making to learn appropriate settings, such as flow arrival rate, workload, and current network environment. Inspired by recent advances in AI to manage resources, we present DeepRoute, a model-less reinforcement learning approach that translates the path computation problem to a learning problem. Learning from the network environment, DeepRoute learns strategies to manage arriving elephant and mice flows to improve the average path utilization in the network. Comparing to other strategies such as prioritizing certain flows and random decisions, DeepRoute is shown to improve average network path utilization to 30% and potentially reduce possible congestion across the whole network. 
                             <br>
-                            These are an important research area to target, as our current systems are becoming more complex and difficult to manage. These kind of algorithms can help our systems to self-regulate themselves reducing overhead on engineers. During this project, we conduct experiments such as testing various deep learning and data driven machine learning approaches, control parameters and how systems can be robust enough to withstand any given workloads.
+                            This work presents results in simulation and also how DeepRoute can be demonstrated by a Mininet implementation.
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- /Services -->
 
-                <!-- Services -->
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12">
-                    <div class="p-10"></div>
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="ci-text">
+                      <img src="./Projects_files/dr.jpg" align="center">
+                      <p>Topology used in the Simulation Model (bu = bandwidth units occupied and tu = time units occupied), Q-values for Local and Global levels.</p>
+                    </div>
+                  </div>
+                </div>
 
                     <div class="block-title">
                       <h2>Time-series prediction for HPC faults on NERSC</h2>
