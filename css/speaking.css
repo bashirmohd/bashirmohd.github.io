@@ -1,0 +1,23 @@
+.frame {
+  height: 70vh;
+  width: 100%;
+}
+
+@media only screen and (max-width: 820px) {
+  .frame {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .frame {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .frame {
+    width: 100%;
+    height: auto;
+  }
+}
