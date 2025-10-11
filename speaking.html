@@ -173,7 +173,8 @@
                             height: 0;
                             overflow: hidden;
                             border-radius: 12px;
-                            background: url('https://raw.githubusercontent.com/bashirmohd/bashirmohd.github.io/master/img/20.png') center center / cover no-repeat;
+                            background: url('https://raw.githubusercontent.com/bashirmohd/bashirmohd.github.io/master/img/20.png')
+                              center center / cover no-repeat;
                           ">
                         <iframe
                           id="sheffield-video-iframe"
@@ -183,48 +184,49 @@
                           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
                         ></iframe>
                     
+                        <!-- Overlay text with transparent background -->
                         <div id="sheffield-video-overlay" style="
                               position: absolute;
                               inset: 0;
                               display: flex;
+                              flex-direction: column;
                               align-items: center;
                               justify-content: center;
-                              background: rgba(0,0,0,0.5);
+                              background: rgba(0,0,0,0.2); /* much lighter now */
                               color: #fff;
                               font: 500 16px system-ui, -apple-system, Segoe UI, Roboto, Arial;
                               text-align: center;
-                              transition: opacity 0.3s ease;
+                              transition: opacity 0.4s ease;
                             ">
-                          <p>Video unavailable — click below to open on Sheffield Digital Media</p>
+                          <p style="margin-bottom: 1rem; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">
+                            Video unavailable — view on Sheffield Digital Media
+                          </p>
+                          <a href="https://digitalmedia.sheffield.ac.uk/media/The+BoardroomA+Artificial+Intelligence/1_97cwr6u5"
+                             target="_blank" rel="noopener"
+                             style="background:#0d6efd;color:#fff;padding:8px 18px;border-radius:6px;text-decoration:none;">
+                            Open Video
+                          </a>
                         </div>
                       </div>
-                    
-                      <p class="mt-2">
-                        <a href="https://digitalmedia.sheffield.ac.uk/media/The+BoardroomA+Artificial+Intelligence/1_97cwr6u5"
-                           target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">
-                          Open Video
-                        </a>
-                      </p>
                     </div>
                     
                     <script>
-                      // Automatically hide overlay if the iframe loads successfully
                       const iframe = document.getElementById('sheffield-video-iframe');
                       const overlay = document.getElementById('sheffield-video-overlay');
                     
-                      // When iframe loads correctly (i.e., no X-Frame restriction)
                       iframe.addEventListener('load', () => {
-                        // Try to detect if we can access the content (not cross-domain blocked)
                         try {
-                          const testAccess = iframe.contentWindow.location.href;
+                          // If we can access iframe content, it's loaded correctly
+                          const test = iframe.contentWindow.location.href;
                           overlay.style.opacity = '0';
-                          setTimeout(() => overlay.style.display = 'none', 300);
+                          setTimeout(() => (overlay.style.display = 'none'), 400);
                         } catch (err) {
-                          // Cross-origin, still blocked -> keep overlay visible
-                          console.warn('Video iframe blocked by host policy');
+                          console.warn('Video iframe blocked — showing fallback overlay.');
+                          overlay.style.background = 'rgba(0,0,0,0.2)'; // light transparent overlay
                         }
                       });
                     </script>
+                    
                     
                     
                     
