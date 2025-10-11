@@ -167,7 +167,7 @@
                         University of Sheffield – The Boardroom: Artificial Intelligence
                       </h5>
                     
-                      <div style="
+                      <div id="sheffield-video-wrapper" style="
                             position: relative;
                             padding-bottom: 56.25%;
                             height: 0;
@@ -176,13 +176,14 @@
                             background: url('https://raw.githubusercontent.com/bashirmohd/bashirmohd.github.io/master/img/20.png') center center / cover no-repeat;
                           ">
                         <iframe
+                          id="sheffield-video-iframe"
                           src="https://digitalmedia.sheffield.ac.uk/p/1/embedIframeJs/uiconf_id/23449815/partner_id/1?iframeembed=true&playerId=kaltura_player&entry_id=1_97cwr6u5"
                           frameborder="0"
                           allowfullscreen
                           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
                         ></iframe>
                     
-                        <div style="
+                        <div id="sheffield-video-overlay" style="
                               position: absolute;
                               inset: 0;
                               display: flex;
@@ -192,8 +193,9 @@
                               color: #fff;
                               font: 500 16px system-ui, -apple-system, Segoe UI, Roboto, Arial;
                               text-align: center;
+                              transition: opacity 0.3s ease;
                             ">
-                          <p>Video unavailable — click to view on Sheffield Digital Media</p>
+                          <p>Video unavailable — click below to open on Sheffield Digital Media</p>
                         </div>
                       </div>
                     
@@ -204,6 +206,26 @@
                         </a>
                       </p>
                     </div>
+                    
+                    <script>
+                      // Automatically hide overlay if the iframe loads successfully
+                      const iframe = document.getElementById('sheffield-video-iframe');
+                      const overlay = document.getElementById('sheffield-video-overlay');
+                    
+                      // When iframe loads correctly (i.e., no X-Frame restriction)
+                      iframe.addEventListener('load', () => {
+                        // Try to detect if we can access the content (not cross-domain blocked)
+                        try {
+                          const testAccess = iframe.contentWindow.location.href;
+                          overlay.style.opacity = '0';
+                          setTimeout(() => overlay.style.display = 'none', 300);
+                        } catch (err) {
+                          // Cross-origin, still blocked -> keep overlay visible
+                          console.warn('Video iframe blocked by host policy');
+                        }
+                      });
+                    </script>
+                    
                     
                     
                     
